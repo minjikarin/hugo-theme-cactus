@@ -37,6 +37,15 @@
   {{ partial "optional-about.html" . }}
   </section>
 
+  <section id="video">
+    <span class="h1">Latest Video</a></span>
+    <span class="body">
+      <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+        <iframe src="https://www.youtube.com/embed/--oFZEbMcmk" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen></iframe>
+      </div>
+    </span>
+  </section>
+
   <section id="writing">
     <span class="h1"><a href="{{ .Site.Params.mainSection | absURL }}">{{ .Site.Params.mainSectionTitle | default "Writings" }}</a></span>
     {{ if (and (and (isset .Site.Params "tagsoverview") (eq .Site.Params.tagsOverview true)) (gt (len .Site.Taxonomies.tags) 0)) }}
